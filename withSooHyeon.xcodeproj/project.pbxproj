@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		784D43DB2AEEB0BB00BB6762 /* CoummityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784D43DA2AEEB0BB00BB6762 /* CoummityCardView.swift */; };
+		789559032AEEC97E00272436 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 789559022AEEC97E00272436 /* PopupView */; };
+		789559052AEEC9B300272436 /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789559042AEEC9B300272436 /* CommunityCardView.swift */; };
 		ED5FF6AF2AE57AE600DE3B12 /* withSooHyeonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FF6AE2AE57AE600DE3B12 /* withSooHyeonApp.swift */; };
 		ED5FF6B12AE57AE600DE3B12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FF6B02AE57AE600DE3B12 /* ContentView.swift */; };
 		ED5FF6B32AE57AE800DE3B12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5FF6B22AE57AE800DE3B12 /* Assets.xcassets */; };
@@ -22,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		784D43DA2AEEB0BB00BB6762 /* CoummityCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoummityCardView.swift; path = ../../../../../withSoo/withSoo/CoummityCardView.swift; sourceTree = "<group>"; };
+		789559042AEEC9B300272436 /* CommunityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardView.swift; sourceTree = "<group>"; };
 		ED5FF6AB2AE57AE600DE3B12 /* withSooHyeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = withSooHyeon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5FF6AE2AE57AE600DE3B12 /* withSooHyeonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withSooHyeonApp.swift; sourceTree = "<group>"; };
 		ED5FF6B02AE57AE600DE3B12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789559032AEEC97E00272436 /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,12 +107,12 @@
 		ED5FF6BE2AE57B7600DE3B12 /* CoreViews */ = {
 			isa = PBXGroup;
 			children = (
-				784D43DA2AEEB0BB00BB6762 /* CoummityCardView.swift */,
 				ED5FF6C12AE57C0300DE3B12 /* HomeView.swift */,
 				ED5FF6C32AE57C7400DE3B12 /* ProfileView.swift */,
 				ED5FF6C52AE57DD500DE3B12 /* ChatView.swift */,
 				ED5FF6CA2AE5802C00DE3B12 /* CommunityView.swift */,
 				ED5FF6CC2AE5805800DE3B12 /* SooHyeonView.swift */,
+				789559042AEEC9B300272436 /* CommunityCardView.swift */,
 			);
 			path = CoreViews;
 			sourceTree = "<group>";
@@ -139,6 +141,9 @@
 			dependencies = (
 			);
 			name = withSooHyeon;
+			packageProductDependencies = (
+				789559022AEEC97E00272436 /* PopupView */,
+			);
 			productName = withSooHyeon;
 			productReference = ED5FF6AB2AE57AE600DE3B12 /* withSooHyeon.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +172,9 @@
 				Base,
 			);
 			mainGroup = ED5FF6A22AE57AE600DE3B12;
+			packageReferences = (
+				789559012AEEC97E00272436 /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = ED5FF6AC2AE57AE600DE3B12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,10 +203,10 @@
 			files = (
 				ED5FF6CD2AE5805800DE3B12 /* SooHyeonView.swift in Sources */,
 				ED5FF6C02AE57BA800DE3B12 /* MyTabView.swift in Sources */,
+				789559052AEEC9B300272436 /* CommunityCardView.swift in Sources */,
 				ED5FF6C22AE57C0300DE3B12 /* HomeView.swift in Sources */,
 				ED5FF6C42AE57C7400DE3B12 /* ProfileView.swift in Sources */,
 				ED5FF6B12AE57AE600DE3B12 /* ContentView.swift in Sources */,
-				784D43DB2AEEB0BB00BB6762 /* CoummityCardView.swift in Sources */,
 				ED5FF6C62AE57DD500DE3B12 /* ChatView.swift in Sources */,
 				ED5FF6C92AE57F7400DE3B12 /* ColorExtension.swift in Sources */,
 				ED5FF6CB2AE5802C00DE3B12 /* CommunityView.swift in Sources */,
@@ -403,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		789559012AEEC97E00272436 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		789559022AEEC97E00272436 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 789559012AEEC97E00272436 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED5FF6A32AE57AE600DE3B12 /* Project object */;
 }
