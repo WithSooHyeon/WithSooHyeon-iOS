@@ -149,7 +149,7 @@ struct CommunityView: View {
             toastView()
         } customize: {
             $0
-                    .type(.floater())
+                .type(.default)
                     .position(.bottom)
                     .animation(.spring())
                     .closeOnTapOutside(true)
