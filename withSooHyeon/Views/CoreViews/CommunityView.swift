@@ -12,6 +12,7 @@ struct CommunityView: View {
     @State private var searchText: String = ""
     @State private var isSearching: Bool = false
     @State private var showingPopup = false
+    @State private var selectedOption: String = "최신순"
     
     func toastView() -> some View{
         VStack(alignment: .leading){
@@ -28,27 +29,23 @@ struct CommunityView: View {
                         .font(.system(size: 12))
                 }
             }
-            Text("최신순")
-                .font(.system(size: 12))
-                .foregroundColor(Color(hex: 0x90ADC7))
-            Spacer().frame(height: 16)
-            Text("조회순")
-                .font(.system(size: 12))
-                .foregroundColor(Color(hex: 0x90ADC7))
-            Spacer().frame(height: 16)
-            Text("댓글순")
-                .font(.system(size: 12))
-                .foregroundColor(Color(hex: 0x90ADC7))
+            OptionView(option: "최신순", selectedOption: $selectedOption)
+                .padding(.bottom,16)
+                .padding(.top,30)
+            OptionView(option: "조회순", selectedOption: $selectedOption)
+                .padding(.bottom,16)
+            OptionView(option: "댓글순", selectedOption: $selectedOption)
         }
-        .padding(27)
-        .frame(maxWidth: .infinity, maxHeight: 200) // 화면 1/3 차지
+        .padding(.leading,27)
+        .padding(.trailing,27)
+        .frame(maxWidth: .infinity, maxHeight: 250) // 화면 1/3 차지
         .background(Color.white)
         .cornerRadius(16)
         
     }
     
     var body: some View {
-        ZStack{
+        ZStack(){
             VStack (spacing: 0){
                 //첫번째 Stack
                 HStack{
@@ -121,7 +118,7 @@ struct CommunityView: View {
                             self.showingPopup = true
                                 }) {
                                     HStack {
-                                        Text("최신순")
+                                        Text("\(selectedOption)")
                                             .font(.system(size: 10))
                                             .foregroundColor(Color(hex: 0x90ADC7))
                                         Image(systemName: "chevron.down")
@@ -149,14 +146,35 @@ struct CommunityView: View {
             toastView()
         } customize: {
             $0
-                .type(.default)
+                    .type(.default)
                     .position(.bottom)
                     .animation(.spring())
                     .closeOnTapOutside(true)
+                    .closeOnTap(false)
                     .backgroundColor(.black.opacity(0.5))
         }
     }
-    
+}
+
+struct OptionView: View {
+    let option: String
+    @Binding var selectedOption: String
+
+    var body: some View {
+        HStack {
+            Text(option)
+                .font(.system(size: 12))
+                .foregroundColor(option == selectedOption ? .blue : Color(hex: 0x90ADC7))
+                .onTapGesture {
+                    selectedOption = option
+                }
+            if option == selectedOption {
+                Spacer()
+                Image(systemName: "checkmark")
+                    .foregroundColor(.blue)
+            }
+        }
+    }
 }
 
 struct CommunityView_Previews: PreviewProvider {
