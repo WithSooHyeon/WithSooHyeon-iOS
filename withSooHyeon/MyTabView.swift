@@ -29,7 +29,7 @@ struct MyTabView: View {
                     .tag(1)
                 ChatView()
                     .tabItem {
-                        Image(systemName: "bubble.left.fill")
+                        Image(systemName: "bubble.fill")
                         Text("채팅")
                     }
                     .tag(2)
